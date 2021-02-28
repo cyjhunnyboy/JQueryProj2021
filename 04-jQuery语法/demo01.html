@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery语法</title>
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#p1").hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <!--
+        jQuery语法
+            通过jQuery，您可以选取（查询，query）HTML元素，并对它们执行"操作"（actions）。
+            jQuery语法是通过选取HTML元素，并对选取的元素执行某些操作。
+            1、基础语法：$(selector).action()
+                1）美元符号定义jQuery
+                2）选择符（selector）"查询"和"查找"HTML元素
+                3）jQuery的action()执行对元素的操作
+            2、实例
+                1）$(this).hide() - 隐藏当前元素
+                2）$("p").hide() - 隐藏所有<p>元素
+                3）$("p.test").hide() - 隐藏所有class="test"的<p>元素
+                4）$("#test").hide() - 隐藏id="test"的元素
+                你对CSS选择器熟悉吗？
+                    jQuery使用的语法是XPath与CSS选择器语法的组合。在本教程接下来的章节，您将学习到更多有关选择器的语法。
+            3、文档就绪事件
+                您也许已经注意到在我们的实例中的所有jQuery函数位于一个document ready函数中：
+                    $(document).ready(function(){
+                        // 开始写jQuery代码......
+                    });
+                这是为了防止文档在完全加载（就绪）之前运行jQuery代码，即在DOM加载完成后才可以对DOM进行操作。
+                如果在文档没有完全加载之前就运行函数，操作可能失败。下面是两个具体的例子：
+                1）试图隐藏一个不存在的元素
+                2）获得未完全加载的图像的大小
+                提示：简洁写法（与以上写法效果相同）
+                    $(function(){
+                        // 开始写jQuery代码......
+                    });
+                以上两种方式你可以选择你喜欢的方式实现文档就绪后执行jQuery方法。
+            4、jQuery入口函数和JavaScript入口函数的区别：
+                1）jQuery入口函数：
+                    $(document).ready(function(){
+                        // 开始写jQuery代码......
+                    });
+                    或者：
+                    $(funciton(){
+                        // 开始写jQuery代码......
+                    });
+                2）JavaScript入口函数：
+                    window.onload = function() {
+                        // 开始写JavaScript代码......
+                    }
+                3）jQuery入口函数与JavaScript入口函数的区别：
+                    a、 jQuery的入口函数是在html所有标签(DOM)都加载之后，就会去执行。
+                    b、JavaScript的window.onload事件是等到所有内容，包括外部图片之类的文件加载完后，才会执行。
+                    c、load和ready区别
+                                    window.onload                       $(document).ready()
+                       执行时机     必须等待网页完全加载完毕（包括           只需要等待网页中的DOM结构
+                                   图片等），然后再执行包裹代码             加载完毕，就能执行包裹的代码
+                       执行次数     只能执行一次，如果第二次，那么           可以执行多次，第N次都不会被上
+                                   第一次的执行会被覆盖                   一次覆盖
+                       简写方案     无                                   $(function(){
+                                                                            // 开始写jQuery代码......
+                                                                        });
+    -->
+    <h2>这是一个标题</h2>
+    <p id="p1">这是一个段落。</p>
+    <p id="p2">这是另一个段落。</p>
+    <button id="btn">点我</button>
+</body>
+</html>
