@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery安装</title>
+    <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#p1").hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <!--
+        jQuery安装
+            1、网页中添加jQuery
+                可以通过多种方法在网页中添加jQuery。 您可以使用以下方法：
+                a、从jquery.com下载jQuery库
+                b、从CDN中载入jQuery，如从Google中加载jQuery
+            2、下载jQuery
+                有两个版本的jQuery可供下载：
+                    a、Production version - 用于实际的网站中，已被精简和压缩。
+                    b、Development version - 用于测试和开发（未压缩，是可读的代码）
+                以上两个版本都可以从jquery.com中下载
+                jQuery库是一个JavaScript文件，您可以使用HTML的<script>标签引用它：
+                    <head>
+                        <script src="jquery-1.10.2.min.js"></script>
+                    </head>
+                提示：将下载文件放在网页的同一个目录下，就可以使用jQuery。
+
+                您是否很疑惑为什么我们没有在<script>标签中使用type="text/javascript" ？
+                在HTML5中，不必那样做了。JavaScript是HTML5以及所有现代浏览器中的默认脚本语言！
+            3、替代方案
+                如果您不希望下载并存放jQuery，那么也可以通过CDN（内容分发网络） 引用它。
+                Staticfile CDN、百度、又拍云、新浪、谷歌和微软的服务器都存有jQuery。
+                如果你的站点用户是国内的，建议使用百度、又拍云、新浪等国内CDN地址，如果你站点用户是国外的可以使用谷歌和微软。
+                注：本站实例均采用菜鸟教程CDN库。
+
+                如需从 Staticfile CDN、又拍云、新浪、谷歌或微软引用 jQuery，请使用以下代码之一：
+                新浪 CDN:
+                <head>
+                    <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+                </head>
+            4、jQuery使用版本
+                我们可以在浏览器的Console窗口中使用$.fn.jquery命令查看当前jQuery使用的版本
+    -->
+    <h2>这是一个标题</h2>
+    <p id="p1">这是一个段落。</p>
+    <p>这是另一个段落。</p>
+    <button id="btn" type="button">点我</button>
+</body>
+</html>
