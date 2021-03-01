@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        jQuery 选择器
+            jQuery选择器允许您对HTML元素组或单个元素进行操作。
+            jQuery选择器基于元素的id、类、类型、属性、属性值等"查找"（或选择）HTML元素。 它基于已经存在的CSS选择器，除此之外，它还有一些自定义的选择器。
+            jQuery中所有选择器都以美元符号开头：$()。
+
+        元素选择器
+            jQuery元素选择器基于元素名选取元素。
+            在页面中选取所有<p>元素:  $("p")
+
+            实例：用户点击按钮后，所有<p>元素都隐藏
+    -->
+    <h2>这是一个标题</h2>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+    <button>点我</button>
+</body>
+</html>
