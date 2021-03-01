@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                // 隐藏当前HTML元素，即button元素
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        jQuery 选择器
+            $("*")：选取所有元素
+            $(this)：选取当前HTML元素
+    -->
+    <h2>这是一个标题</h2>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+    <button id="btn">点我</button>
+</body>
+</html>

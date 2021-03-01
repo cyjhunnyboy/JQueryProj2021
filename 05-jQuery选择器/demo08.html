@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("ul li:first").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        jQuery 选择器
+            $("*")：选取所有元素
+            $(this)：选取当前HTML元素
+            $("p.intro")：选取class为intro的<p>元素
+            $("p:first")：选取第一个<p>元素
+            $("ul li:first)：选取第一个<ul>元素的第一个<li>元素
+    -->
+    <p>List 1：</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <p>List 2：</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <button id="btn">点我</button>
+</body>
+</html>
