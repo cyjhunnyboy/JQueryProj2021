@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $("tr:odd").css("background-color", "yellow");
+        });
+    </script>
+</head>
+<body>
+    <!--
+        jQuery 选择器
+            $("*")：选取所有元素
+            $(this)：选取当前HTML元素
+            $("p.intro")：选取class为intro的<p>元素
+            $("p:first")：选取第一个<p>元素
+            $("ul li:first)：选取第一个<ul>元素的第一个<li>元素
+            $("ul li:first-child")：选取每个<ul>元素的第一个<li>元素
+            $("[href]")：选取带有href属性的元素
+            $("a[target='_blank']")：选取所有target属性值等于"_blank"的<a>元素
+            $("a[target!='_blank']")：选取所有target属性值不等于"_blank"的<a>元素
+            $(":button")：选取所有type="button"的<input>元素和<button>元素
+            $("tr:even")：选取偶数位置的<tr>元素
+            $("tr:odd")：选取奇数位置的<tr>元素
+    -->
+    <h1>欢迎访问我的主页</h1>
+
+    <table border="1">
+        <tr>
+            <th>网站名</th>
+            <th>网址</th>
+        </tr>
+        <tr>
+            <td>Google</td>
+            <td>http://www.google.com</td>
+        </tr>
+        <tr>
+            <td>Baidu</td>
+            <td>http://www.baidu.com</td>
+        </tr>
+        <tr>
+            <td>菜鸟教程</td>
+            <td>http://www.runoob.com</td>
+        </tr>
+        <tr>
+            <td>淘宝</td>
+            <td>http://www.taobao.com</td>
+        </tr>
+        <tr>
+            <td>Facebook</td>
+            <td>http://www.facebook.com</td>
+        </tr>
+    </table>
+</body>
+</html>

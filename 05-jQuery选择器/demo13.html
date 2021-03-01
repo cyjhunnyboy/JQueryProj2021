@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery选择器</title>
+    <script src="../jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $(":button").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        jQuery 选择器
+            $("*")：选取所有元素
+            $(this)：选取当前HTML元素
+            $("p.intro")：选取class为intro的<p>元素
+            $("p:first")：选取第一个<p>元素
+            $("ul li:first)：选取第一个<ul>元素的第一个<li>元素
+            $("ul li:first-child")：选取每个<ul>元素的第一个<li>元素
+            $("[href]")：选取带有href属性的元素
+            $("a[target='_blank']")：选取所有target属性值等于"_blank"的<a>元素
+            $("a[target!='_blank']")：选取所有target属性值不等于"_blank"的<a>元素
+            $(":button")：选取所有type="button"的<input>元素和<button>元素
+    -->
+    <h2>这是标题</h2>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+    <button>点我</button>
+</body>
+</html>
